@@ -14,22 +14,22 @@
     <h1>Melissa Guerrero</h1>
     <div class="calculadora">
       <h1>Calculadora</h1>
-      <p id="resultado">0</p>
+      <p id="resultado"></p>
       <table>
         <tr>
-          <td><button class="botao">C</button></td>
-          <td><button class="botao">
+          <td><button class="botao" onclick="insert('C')">C</button></td>
+          <td><button class="botao" onclick="insert('<')">
               < </button>
           </td>
-          <td><button class="botao">/</button></td>
-          <td><button class="botao">X</button></td>
+          <td><button class="botao" onclick="insert('/')">/</button></td>
+          <td><button class="botao" onclick="insert('X')">X</button></td>
         </tr>
 
         <tr>
           <td><button class="botao" onclick="insert('7')">7</button></td>
           <td><button class="botao" onclick="insert('8')">8</button></td>
           <td><button class="botao" onclick="insert('9')">9</button></td>
-          <td><button class="botao">-</button></td>
+          <td><button class="botao" onclick="insert('-')">-</button></td>
         </tr>
 
         <tr>
@@ -37,14 +37,14 @@
           <td><button class="botao" onclick="insert('5')">5</button>
           </td>
           <td><button class="botao" onclick="insert('6')">6</button></td>
-          <td><button class="botao">+</button></td>
+          <td><button class="botao" onclick="insert('+')">+</button></td>
         </tr>
 
         <tr>
           <td><button class="botao" onclick="insert('1')">1</button></td>
           <td><button class="botao" onclick="insert('2')">2</button></td>
           <td><button class="botao" onclick="insert('3')">3</button></td>
-          <td rowspan="2"><button class="botao" style="height: 106px;">=</button></td>
+          <td rowspan="2"><button class="botao" style="height: 106px;" onclick="insert('=')">=</button></td>
         </tr>
 
         <tr>
@@ -59,8 +59,8 @@
     function insert(num) {
       var numero = document.getElementById('resultado').innerHTML;
       document.getElementById('resultado').innerHTML = numero + num;
-
     }
+
   </script>
 </body>
 
